@@ -1,11 +1,49 @@
-\documentclass{article}
+% ********************************************************* %
+% ~~~~~~~~         Formato de las páginas         ~~~~~~~~~ %
+% ********************************************************* %
+\documentclass[a4paper]{article}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}		% Para las R de reales y N de naturales
 \usepackage[utf8]{inputenc}
-\usepackage{diagbox}		% Para hacer la linea diagonal en las tablas
+\usepackage{diagbox}	
+\usepackage{listings}
+\usepackage{amsmath, amsthm, amssymb}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}	% Para hacer la linea diagonal en las tablas
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ - #1}}
+
+\fancyhf{}
+
+\fancyfoot[RO]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\setlength{\hoffset}{-0.8in}
+\setlength{\textwidth}{16cm}
+%\setlength{\hoffset}{-1.1cm}
+%\setlength{\textwidth}{16cm}
+\setlength{\headsep}{0.5cm}
+\setlength{\textheight}{25cm}
+\setlength{\voffset}{-0.7in}
+\setlength{\headwidth}{\textwidth}
+\setlength{\headheight}{13.1pt}
+
+\renewcommand{\baselinestretch}{1.1}  % line spacing
+
+% ******************************************************** %
 
 \begin{document}
+\title{Problemas para el final de proba}
+\maketitle
+\newpage
+\tableofcontents
+
+\newpage
 \include{src/01-probabilidad}
 \include{src/02-proba-condicional}
 \include{src/03-variables-aleatorias}
